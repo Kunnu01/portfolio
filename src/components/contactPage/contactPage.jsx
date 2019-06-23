@@ -14,7 +14,7 @@ class ContactPage extends Component {
   render() {
     return (
       <React.Fragment>
-        <Box display="flex" justifyContent="space-between" m={5} p={2}>
+        {/* <Box display="flex" justifyContent="space-between" m={5} p={2}>
         <Box p={2}>
           <FontAwesomeIcon style={{color: '#53f6c7'}} icon={faInstagram} size="3x" />
         </Box>
@@ -33,7 +33,8 @@ class ContactPage extends Component {
         <Box p={2}>
           <FontAwesomeIcon style={{color: '#53f6c7'}} icon={faMedium} size="3x" />
         </Box>
-      </Box>
+      </Box> */}
+      <h1>Contact Section</h1>
       </React.Fragment>
     );
   }
