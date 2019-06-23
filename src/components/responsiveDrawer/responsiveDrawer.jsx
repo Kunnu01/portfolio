@@ -116,14 +116,14 @@ class ResponsiveDrawer extends Component {
         text: "Blog",
         icon: <FontAwesomeIcon icon={faMedium} size="2x" />,
       },
-    ];
-  };
-  getSecondarySideOptions = () => {
-    return [
       {
         text: "Contact",
         icon: <FontAwesomeIcon icon={faEnvelope} size="2x" />,
       },
+    ];
+  };
+  getSecondarySideOptions = () => {
+    return [
       {
         text: this.state.isLightTheme ? "Lights Off" : "Lights On",
         icon: this.state.isLightTheme ? <Fade in={this.state.isLightTheme} timeout={1000}><FontAwesomeIcon icon={faCloudMoon} size="2x" /></Fade> : <Fade in={!this.state.isLightTheme} timeout={1000}><FontAwesomeIcon icon={faCloudSun} size="2x" /></Fade>,
