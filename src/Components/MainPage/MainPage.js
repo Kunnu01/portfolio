@@ -1,13 +1,15 @@
 import React from 'react'
 import { Typography } from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
+import Typing from '../Typist/Typist';
+import TextLoop from "react-text-loop";
 
 const styles = theme => ({
     root: {
         display: 'flex',
-        paddingTop: '2%',
-        marginLeft: '4%',
-        marginRight: '12%',
+        paddingTop: '5%',
+        marginLeft: '8%',
+        marginRight: '8%',
         [theme.breakpoints.down('sm')]: {
             flexDirection: 'column',
             marginTop: '10%',
@@ -54,6 +56,18 @@ const styles = theme => ({
             display: 'none',
         }
     },
+    hireMe: {
+        position: 'relative',
+        top: '-20%',
+        height: '10px',
+        alignItems: 'left',
+        [theme.breakpoints.down('sm')]: {
+            marginBottom: '35%',
+        }
+    },
+    hireMeContent: {
+        paddingTop: 0,
+    },
     imageSection: {
         flex: 0.8,
         paddingTop: '4%',
@@ -61,29 +75,31 @@ const styles = theme => ({
         padding: '5px',
     },
     image: {
-        height: 'auto',
-        maxWidth: '100%',
+        maxHeight: '100%',
+        maxWidth: '90%',
+        marginBottom: '8%',
         cursor: 'pointer',
-        // boxShadow: '25px 20px 15px #2a2931'
+        boxShadow: '25px 20px 15px #2a2931'
     },
 });
 
 const MainPage = (props) => {
     const { classes } = props;
+    const intro = ['Full Stack Developer ', 'From India '];
     return (
         <section className={classes.root}>
             <div className={classes.intro}>
                 <Typography align="left" className={classes.intro} variant="h1" color="textPrimary">
                     <span style={{color: '#53f6c7'}}>&lt;b&gt;</span>
-                    Hello<span style={{color: '#53f6c7'}}>&lt;/b&gt;</span> <span style={{color: '#53f6c7'}}>I'm Kunal, </span>
-                    Full Stack Developer
+                    <TextLoop>
+                        <span>Hello</span>
+                        <span>Hola</span>
+                        <span>Hallo</span>
+                        <span>Namastey</span>
+                    </TextLoop>
+                    <span style={{color: '#53f6c7'}}>&lt;/b&gt;</span> <span style={{color: '#53f6c7'}}>I'm Kunal, </span>
+                    <Typing words={intro} />
                 </Typography>
-                {/* <Typography align="left" className={classes.para} variant="p" color="textPrimary">
-                    A WordPress website about Hypergiant company which creates hyper-efficient and scalable. The careful have the as a spirits and client ihave by assistant have took initial sentences omens.
-                </Typography> */}
-                {/* <Typography align="left" className={classes.sectionHeading} variant="h1">
-                    &gt;&lt;
-                </Typography> */}
             </div>
             <div className={classes.imageSection}>
                 {/* <Tilt className="Tilt" options={{ max : 5 }}> */}
@@ -93,4 +109,5 @@ const MainPage = (props) => {
         </section>
     )
 }
+
 export default withStyles(styles)(MainPage);
