@@ -7,11 +7,10 @@ import TextLoop from "react-text-loop";
 const styles = theme => ({
     root: {
         display: 'flex',
-        paddingTop: '5%',
         marginLeft: '8%',
         marginRight: '8%',
         [theme.breakpoints.down('sm')]: {
-            flexDirection: 'column',
+            flexDirection: 'column-reverse',
             marginTop: '10%',
         },
     },
@@ -23,7 +22,7 @@ const styles = theme => ({
         padding: '5px',
         fontSize: '4.2rem',
         [theme.breakpoints.down('sm')]: {
-            fontSize: '3.5rem',
+            fontSize: '3rem',
         },
     },
     para: {
@@ -79,7 +78,11 @@ const styles = theme => ({
         maxWidth: '90%',
         marginBottom: '8%',
         cursor: 'pointer',
-        boxShadow: '25px 20px 15px #2a2931'
+        boxShadow: '25px 20px 15px #2a2931',
+        [theme.breakpoints.down('sm')]: {
+            width: '70%',
+            borderRadius: '10px',
+        },
     },
 });
 

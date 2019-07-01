@@ -63,6 +63,10 @@ const darkTheme = createMuiTheme({
             minHeight: '100vh',
             // background: '#1d1b24',
             background: '#0a0c17',
+            padding: '2%',
+            paddingTop: '6%',
+            flexGrow: 1,
+            boxSizing: 'border-box',
         },
         fullHeight: {
             minHeight: '100vh',

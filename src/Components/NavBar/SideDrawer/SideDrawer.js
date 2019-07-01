@@ -11,7 +11,8 @@ import Switch from '@material-ui/core/Switch';
 import Fade from '@material-ui/core/Fade';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome, faUserCircle, faEnvelope, faCode, faCodeBranch, faCloudMoon, faCloudSun } from '@fortawesome/free-solid-svg-icons';
+import { faHome, faUserCircle, faEnvelope, faCodeBranch, faCloudMoon, faCloudSun } from '@fortawesome/free-solid-svg-icons';
+import { faMedium } from '@fortawesome/free-brands-svg-icons';
 import { Typography } from '@material-ui/core';
 
 const styles = theme => ({
@@ -85,9 +86,9 @@ class TemporaryDrawer extends React.Component {
                 link: '/projects',
             },
             {
-                text: 'Skills',
-                icon: <FontAwesomeIcon icon={faCode} size="2x" />,
-                link: '/skills',
+                text: 'Blogs',
+                icon: <FontAwesomeIcon icon={faMedium} size="2x" />,
+                link: '/blogs',
             },
             {
                 text: 'Contact',

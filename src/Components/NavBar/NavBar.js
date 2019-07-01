@@ -9,7 +9,7 @@ import Tilt from 'react-tilt';
 import SideDrawer from './SideDrawer/SideDrawer';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInstagram, faFacebook, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faInstagram, faFacebook, faGithub, faLinkedin, faMediumM } from '@fortawesome/free-brands-svg-icons';
 
 const styles = theme => ({
     root: {
@@ -84,6 +84,13 @@ class NavBar extends React.Component {
                             <Tilt className="Tilt" options={{ max : 100 }} style={{height: 30, width: 30}} >
                                 <div className="Tilt-inner"> 
                                     <FontAwesomeIcon icon={faInstagram} size="1x" />
+                                </div>
+                            </Tilt>
+                        </IconButton>
+                        <IconButton color="inherit">
+                            <Tilt className="Tilt" options={{ max : 100 }} style={{height: 30, width: 30}} >
+                                <div className="Tilt-inner"> 
+                                    <FontAwesomeIcon icon={faMediumM} size="1x" />
                                 </div>
                             </Tilt>
                         </IconButton>

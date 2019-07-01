@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { NavBar, MainPage, ProjectsPage } from './Components';
+import { NavBar, MainPage, ProjectsPage, BlogPage } from './Components';
 import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
 import { darkTheme, lightTheme } from './theme/theme';
 import './App.css';
-// import { Typography } from '@material-ui/core';
 
 class App extends Component {
   constructor(props) {
@@ -37,6 +36,7 @@ class App extends Component {
                 >
                   <Route exact path="/" component={MainPage} />
                   <Route path="/projects" component={ProjectsPage} />
+                  <Route path="/blogs" component={BlogPage} />
                 </main>
               </Switch>
             </Router>
