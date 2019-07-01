@@ -62,7 +62,7 @@ class BlogPage extends Component {
               {/* <Button size="small" color="primary">
                 Share
               </Button> */}
-              <Button size="small" color="primary">
+              <Button size="small" color="textSecondary">
                 Read more
               </Button>
             </CardActions>
