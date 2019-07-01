@@ -21,8 +21,6 @@
     "react-typist": "^2.0.5"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -31,7 +29,6 @@
   "eslintConfig": {
     "extends": "react-app"
   },
-  "homepage": "https://kunnu01.github.io/kunalbhatia",
   "browserslist": {
     "production": [
       ">0.2%",
