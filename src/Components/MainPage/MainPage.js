@@ -22,50 +22,8 @@ const styles = theme => ({
         padding: '5px',
         fontSize: '4.2rem',
         [theme.breakpoints.down('sm')]: {
-            fontSize: '3rem',
+            fontSize: '2.5rem',
         },
-    },
-    para: {
-        position: 'relative',
-        zIndex: 1,
-        paddingTop: '7%',
-        fontSize: '20px',
-        lineHeight: '33px',
-        fontStyle: 'normal',
-        fontWeight: '300',
-        [theme.breakpoints.down('sm')]: {
-            paddingTop: '10%',
-            fontSize: '20px',
-            lineHeight: '33px',
-            fontStyle: 'normal',
-            fontWeight: '300',
-        },
-    },
-    sectionHeading: {
-        paddingBottom: '10%',
-        zIndex: 0,
-        height: '40px',
-        position: 'relative',
-        top: '-35%',
-        left: '-45%',
-        fontWeight: 'bold',
-        fontSize: '30rem',
-        color: '#2a2930',
-        [theme.breakpoints.down('sm')]: {
-            display: 'none',
-        }
-    },
-    hireMe: {
-        position: 'relative',
-        top: '-20%',
-        height: '10px',
-        alignItems: 'left',
-        [theme.breakpoints.down('sm')]: {
-            marginBottom: '35%',
-        }
-    },
-    hireMeContent: {
-        paddingTop: 0,
     },
     imageSection: {
         flex: 0.8,
@@ -105,9 +63,7 @@ const MainPage = (props) => {
                 </Typography>
             </div>
             <div className={classes.imageSection}>
-                {/* <Tilt className="Tilt" options={{ max : 5 }}> */}
-                    <img className={classes.image} src="./Images/me.png" alt="myphoto"/>
-                {/* </Tilt> */}
+                <img className={classes.image} src="./Images/me.png" alt="myphoto"/>
             </div>
         </section>
     )

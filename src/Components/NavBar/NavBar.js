@@ -4,6 +4,7 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
 import { withStyles } from '@material-ui/core/styles';
+import { Link } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 import Tilt from 'react-tilt';
 import SideDrawer from './SideDrawer/SideDrawer';
@@ -59,35 +60,35 @@ class NavBar extends React.Component {
                         </IconButton>
                         <div className={classes.grow} />
                         <div>
-                        <IconButton color="inherit">
+                        <IconButton href="https://github.com/Kunnu01" color="inherit">
                             <Tilt className="Tilt" options={{ max : 100 }} style={{height: 30, width: 30}} >
-                                <div className="Tilt-inner"> 
+                                <div className="Tilt-inner">
                                     <FontAwesomeIcon icon={faGithub} size="1x" />
                                 </div>
                             </Tilt>
                         </IconButton>
-                        <IconButton color="inherit">
+                        <IconButton href="https://www.linkedin.com/in/kunal-bhatia-a69843118/" color="inherit">
                             <Tilt className="Tilt" options={{ max : 100 }} style={{height: 30, width: 30}} >
-                                <div className="Tilt-inner"> 
+                                <div className="Tilt-inner">
                                     <FontAwesomeIcon icon={faLinkedin} size="1x" />
                                 </div>
                             </Tilt>
                         </IconButton>
-                        <IconButton color="inherit">
+                        <IconButton href="https://www.facebook.com/kunal.bhatia.940" color="inherit">
                             <Tilt className="Tilt" options={{ max : 100 }} style={{height: 30, width: 30}} >
                                 <div className="Tilt-inner"> 
                                     <FontAwesomeIcon icon={faFacebook} size="1x" />
                                 </div>
                             </Tilt>
                         </IconButton>
-                        <IconButton color="inherit">
+                        <IconButton href="https://www.instagram.com/kunnu01/" color="inherit">
                             <Tilt className="Tilt" options={{ max : 100 }} style={{height: 30, width: 30}} >
                                 <div className="Tilt-inner"> 
                                     <FontAwesomeIcon icon={faInstagram} size="1x" />
                                 </div>
                             </Tilt>
                         </IconButton>
-                        <IconButton color="inherit">
+                        <IconButton href="https://medium.com/@kunalbhatia2409" color="inherit">
                             <Tilt className="Tilt" options={{ max : 100 }} style={{height: 30, width: 30}} >
                                 <div className="Tilt-inner"> 
                                     <FontAwesomeIcon icon={faMediumM} size="1x" />

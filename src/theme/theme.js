@@ -30,6 +30,10 @@ const lightTheme = createMuiTheme({
         mainPage: {
             minHeight: '100vh',
             background: 'linear-gradient(to top, #f5f5f5 30%, #fafafa 100%)',
+            padding: '2%',
+            paddingTop: '6%',
+            flexGrow: 1,
+            boxSizing: 'border-box',
         },
         fullHeight: {
             minHeight: '100vh',

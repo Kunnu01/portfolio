@@ -27,7 +27,6 @@ class App extends Component {
       <>
         <div className="App">
           <MuiThemeProvider theme={portfolioTheme}>
-            {/* <CssBaseline /> */}
             <Router>
                 <NavBar isLightTheme={isLightTheme} handleSwitch={this.handleThemeSwitch} />
               <Switch>

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Typography from '@material-ui/core/Typography';
-import Paper from '@material-ui/core/Paper';
 import CardMedia from '@material-ui/core/CardMedia';
 import { withStyles } from '@material-ui/core/styles';
 import { Card, CardActionArea, CardContent, CardActions, Button, Link } from '@material-ui/core';
@@ -42,7 +41,7 @@ class BlogPage extends Component {
     const { blogPosts = [] } = this.state;
     return blogPosts.map(blog => {
       return (
-        <Card className={classes.root}>
+        <Card key={blog.title} className={classes.root}>
           <CardActionArea>
             <Link href={blog.link}>
               <CardMedia
@@ -55,14 +54,11 @@ class BlogPage extends Component {
                 {blog.title}
               </Typography>
               <Typography component="p">
-                Paper can be used to build surface or other elements for your application.
+                {/* {blog.content} */}
               </Typography>
             </CardContent>
             <CardActions>
-              {/* <Button size="small" color="primary">
-                Share
-              </Button> */}
-              <Button size="small" color="textSecondary">
+              <Button target='_blank' href={blog.link} size="small" color="default">
                 Read more
               </Button>
             </CardActions>
@@ -72,7 +68,7 @@ class BlogPage extends Component {
     });
   }
   render() {
-    console.log(this.state.blogPosts);
+    // console.log(this.state.blogPosts);
     return (
       <React.Fragment>
         {this.getBlogPosts()}
