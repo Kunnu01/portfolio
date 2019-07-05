@@ -43,7 +43,7 @@ class BlogPage extends Component {
       return (
         <Card key={blog.title} className={classes.root}>
           <CardActionArea>
-            <Link href={blog.link}>
+            <Link target="_blank" href={blog.link}>
               <CardMedia
                 className={classes.media}
                 image={blog.thumbnail}
@@ -54,7 +54,6 @@ class BlogPage extends Component {
                 {blog.title}
               </Typography>
               <Typography component="p">
-                {/* {blog.content} */}
               </Typography>
             </CardContent>
             <CardActions>
