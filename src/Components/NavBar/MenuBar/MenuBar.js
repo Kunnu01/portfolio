@@ -38,7 +38,6 @@ const styles = theme => ({
 
 const MenuBar = (props) => {
     const { classes } = props;
-    console.log(styleClasses.MenubarItems)
 
     const linkTo = (link) => {
         const { history } = props;
