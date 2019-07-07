@@ -7,6 +7,7 @@ import { withStyles } from '@material-ui/core/styles';
 import MenuIcon from '@material-ui/icons/Menu';
 import Tilt from 'react-tilt';
 import SideDrawer from './SideDrawer/SideDrawer';
+import MenuBar from './MenuBar/MenuBar';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faFacebook, faGithub, faLinkedin, faMediumM } from '@fortawesome/free-brands-svg-icons';
@@ -14,6 +15,7 @@ import { faInstagram, faFacebook, faGithub, faLinkedin, faMediumM } from '@forta
 const styles = theme => ({
     root: {
         width: '100%',
+        zIndex: '1000',
     },
     grow: {
         flexGrow: 1,
@@ -97,6 +99,10 @@ class NavBar extends React.Component {
                         </div>
                     </Toolbar>
                     </AppBar>
+                    <MenuBar 
+                        handleSwitch={handleSwitch}
+                        isLightTheme={this.props.isLightTheme}
+                    />
                 </div>
                 <SideDrawer
                     handleSwitch={handleSwitch}

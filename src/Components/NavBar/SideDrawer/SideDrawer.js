@@ -118,23 +118,21 @@ class TemporaryDrawer extends React.Component {
                 </ListItemText>
                 </ListItem>
             ))}
-            </List>
-            <List>
-                {this.getSecondarySideOptions().map(({ text, icon, switchMode = null }) => (
-                    <ListItem button key={text} onClick={() => {}}>
-                    <ListItemIcon className={classes.listItemIcon}>{icon}</ListItemIcon>
-                    <ListItemText>
-                        <Typography
-                            variant="button"
-                            color='textSecondary'
-                            style={{whiteSpace: 'nowrap'}}
-                        >
-                            {text}
-                        </Typography>
-                    </ListItemText>
-                    {switchMode}
-                    </ListItem>
-                ))}
+            {this.getSecondarySideOptions().map(({ text, icon, switchMode = null }) => (
+                <ListItem button key={text} onClick={() => {}}>
+                <ListItemIcon className={classes.listItemIcon}>{icon}</ListItemIcon>
+                <ListItemText>
+                    <Typography
+                        variant="button"
+                        color='textSecondary'
+                        style={{whiteSpace: 'nowrap'}}
+                    >
+                        {text}
+                    </Typography>
+                </ListItemText>
+                {switchMode}
+                </ListItem>
+            ))}
             </List>
         </div>
         );

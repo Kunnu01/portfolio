@@ -7,10 +7,11 @@ import TextLoop from "react-text-loop";
 const styles = theme => ({
     root: {
         display: 'flex',
-        marginLeft: '8%',
+        marginLeft: '10vw',
         marginRight: '8%',
         [theme.breakpoints.down('sm')]: {
             flexDirection: 'column-reverse',
+            
             marginTop: '10%',
         },
     },

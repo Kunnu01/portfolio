@@ -3,6 +3,7 @@ import Typography from '@material-ui/core/Typography';
 import CardMedia from '@material-ui/core/CardMedia';
 import { withStyles } from '@material-ui/core/styles';
 import { Card, CardActionArea, CardContent, CardActions, Button, Link } from '@material-ui/core';
+import Spinner from '../Spinner/Spinner';
 
 
 const styles = theme => ({
@@ -11,6 +12,8 @@ const styles = theme => ({
     padding: theme.spacing.unit * 2,
     background: '#0a192f',
     backgroundColor: 'rgba(255, 255, 255, 0.1)',
+    marginLeft: '5vw',
+    marginRight: '2vw',
     [theme.breakpoints.down('sm')]: {
       margin: '5%',
       marginTop: '12%',
@@ -25,6 +28,7 @@ class BlogPage extends Component {
     super(props);
     this.state = {
       blogPosts : [],
+      isLoading: true,
     };
   }
   componentDidMount() {
@@ -33,7 +37,7 @@ class BlogPage extends Component {
     .then(data => {
       const posts = data.items;
       const blogPosts = posts.filter(post => post.categories.length > 0);
-      this.setState({ blogPosts });
+      this.setState({ blogPosts, isLoading: false });
     });
   }
   getBlogPosts = () => {
@@ -68,9 +72,10 @@ class BlogPage extends Component {
   }
   render() {
     // console.log(this.state.blogPosts);
+    const { isLoading } = this.state;
     return (
       <React.Fragment>
-        {this.getBlogPosts()}
+        { isLoading ? <Spinner /> : this.getBlogPosts()}
       </React.Fragment>
     );
   }
