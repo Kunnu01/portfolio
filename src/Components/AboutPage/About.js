@@ -91,7 +91,7 @@ const About = (props) => {
         <div className={classes.root}>
             <Typography variant="h3" className={classes.heading} color="textSecondary">About Me</Typography>
 
-            <Typography className={classes.para}>
+            <Typography variant="h6" className={classes.para}>
                 A growing engineer who has the technical knowledge of how things
             </Typography>
             <Typography variant="h6" className={classes.para}>
