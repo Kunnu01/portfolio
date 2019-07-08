@@ -5,17 +5,12 @@ const lightTheme = createMuiTheme({
         useNextVariants: true,
         fontFamily: "\"Roboto\", sans-serif",
         fontWeightLight: '600',
-        body1: {
-            fontSize: "1.3125rem",
-            fontWeight: 400,
-            lineHeight: "1.5em",
-        }
     },
     palette: {
         type: "light",
         text: {
             primary: "#222222",
-            secondary: "#606060"
+            secondary: "#299a79"
         },
         primary: {
             light: '#4f83cc',

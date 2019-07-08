@@ -58,7 +58,7 @@ const ContactPage = (props) => {
                 opportunities in developer communities or just to say hello.
             </Typography>
             <Typography variant="h6" className={classes.findMe}>
-                You can find at:
+                You can find me at:
             </Typography>
             <Typography variant="h6">
                 kunalbhatia2409@gmail.com
@@ -70,7 +70,7 @@ const ContactPage = (props) => {
                 href="mailto:kunalbhatia2409@gmail.com"
                 className={classes.button}
             >
-                Say Hi
+                Say Hello
             </Button>
         </div>
     )

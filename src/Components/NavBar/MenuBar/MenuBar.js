@@ -10,7 +10,15 @@ import Fade from '@material-ui/core/Fade';
 
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome, faUserCircle, faEnvelope, faCodeBranch, faCloudMoon, faCloudSun } from '@fortawesome/free-solid-svg-icons';
+import {
+    faHome,
+    faUserCircle,
+    faEnvelope,
+    faCodeBranch,
+    faCloudMoon,
+    faCloudSun,
+    faBriefcase
+} from '@fortawesome/free-solid-svg-icons';
 import { faMedium } from '@fortawesome/free-brands-svg-icons';
 
 const styles = theme => ({
@@ -65,6 +73,11 @@ const MenuBar = (props) => {
             text: 'About',
             icon: <FontAwesomeIcon icon={faUserCircle} size="2x" />,
             link: '/about',
+        },
+        {
+            text: 'Experience',
+            icon: <FontAwesomeIcon icon={faBriefcase} size="2x" />,
+            link: '/experience',
         },
         {
             text: 'Projects',

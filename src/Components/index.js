@@ -5,3 +5,4 @@ export { ProjectsPage } from './ProjectsPage';
 export { Typing } from './Typist';
 export { BlogPage } from './Blogs';
 export { ContactPage } from './ContactPage';
+export { AboutPage } from  './AboutPage';
