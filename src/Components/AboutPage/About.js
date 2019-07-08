@@ -47,6 +47,20 @@ const styles = theme => ({
         [theme.breakpoints.down('sm')]: {
             margin: '0',
         },
+    },
+    languagesContainer: {
+        margin: '0 5vw',
+        [theme.breakpoints.down('sm')]: {
+            margin: '0 -7vw',
+        },
+    },
+    languages: {
+        margin: '0',
+        display: 'flex',
+        [theme.breakpoints.down('sm')]: {
+            margin: '0',
+            flexDirection: 'column',
+        },
     }
 })
 
@@ -62,6 +76,13 @@ const About = (props) => {
         'GraphQL',
         'Git & Github',
     ];
+
+    const languages = [
+        'English',
+        'Hindi',
+        'Spanish (Intermediate)',
+        'German (Beginner)',
+    ]
 
     const skillsMid = Math.floor(skills.length / 2);
     
@@ -84,7 +105,7 @@ const About = (props) => {
             I’m also a firm believer that we should never settle
             </Typography>
 
-            <Typography variant="h6" style={{margin: '2% 0', marginBottom: '1%'}}>
+            <Typography variant="h6" color="textSecondary" style={{margin: '2% 0', marginBottom: '1%'}}>
                 Tools & technologies that I have experience with:
             </Typography>
             
@@ -116,6 +137,28 @@ const About = (props) => {
                     }
                 </List>
             </div>
+                <Typography variant="h6" color="textSecondary" style={{marginBottom: '1%'}}>
+                    Languages I know:
+                </Typography>
+                <div className={classes.languagesContainer}>
+                    <List className={classes.languages}>
+                        {
+                            languages
+                                .map(language => (
+                                    <ListItem key={language}>
+                                        <ListItemIcon style={{color: '#53f6c7'}}>
+                                            <SendIcon />
+                                        </ListItemIcon>
+                                        <ListItemText 
+                                            variant="h4"
+                                            styles={{'white-space': 'nowrap'}} 
+                                            primary={language} 
+                                        />
+                                    </ListItem>
+                                ))
+                        }
+                    </List>
+                </div>
         </div>
     )
 }

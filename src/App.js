@@ -7,6 +7,7 @@ import {
   BlogPage,
   ContactPage,
   AboutPage,
+  ExperiencePage,
 } from './Components';
 import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
 import { darkTheme, lightTheme } from './theme/theme';
@@ -45,6 +46,7 @@ class App extends Component {
                   <Route path="/blogs" component={BlogPage} />
                   <Route path="/contact" component={ContactPage} />
                   <Route path="/about" component={AboutPage} />
+                  <Route path="/experience" component={ExperiencePage} />
                 </main>
               </Switch>
             </Router>

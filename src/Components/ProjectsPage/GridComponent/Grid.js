@@ -89,13 +89,11 @@ function AdvancedGridList(props) {
       <GridList cellHeight={270} spacing={24} className={classes.gridList}>
         {tileData.map(tile => (
           <GridListTile className={classes.projects} key={tile.img} cols={tile.featured ? 3 : 0.6} rows={tile.featured ? 3 : 1}>
-          <Tilt className="Tilt" options={{ max : 50 }} style={{height: '100%', width: 'auto'}}>
             <img
               src={tile.img}
               style={{objectFit: 'inherit', height: '100%', width: '100%', borderRadius: '3%'}} 
               alt={tile.title} 
               />
-              </Tilt>
             <GridListTileBar
               title={tile.title}
               color="#53f6c7"
