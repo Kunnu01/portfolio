@@ -3,6 +3,7 @@ import { withStyles, Typography, List, ListItem } from '@material-ui/core';
 import SendIcon from '@material-ui/icons/Send';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
+import Chip from '@material-ui/core/Chip';
 
 const styles = theme => ({
     root: {
@@ -35,21 +36,25 @@ const styles = theme => ({
     },
     skillsContainer: {
         display: 'flex',
-        margin: '0 32vw',
+        justifyContent: 'center',
+        flexWrap: 'wrap',
         [theme.breakpoints.down('sm')]: {
             margin: '0 -7vw',
         },
     },
     skills: {
-        margin: '0 3%',
-        display: 'flex',
-        flexDirection: 'column',
+        margin: '0 1%',
+        color: theme.palette.text.primary,
         [theme.breakpoints.down('sm')]: {
             margin: '0',
         },
     },
+    chip: {
+        margin: '3%',
+    },
     languagesContainer: {
-        margin: '0 5vw',
+        display: 'flex',
+        justifyContent: 'center',
         [theme.breakpoints.down('sm')]: {
             margin: '0 -7vw',
         },
@@ -57,6 +62,8 @@ const styles = theme => ({
     languages: {
         margin: '0',
         display: 'flex',
+        color: theme.palette.text.primary,
+        whiteSpace: 'nowrap',
         [theme.breakpoints.down('sm')]: {
             margin: '0',
             flexDirection: 'column',
@@ -112,27 +119,8 @@ const About = (props) => {
             <div className={classes.skillsContainer}>
                 <List className={classes.skills}>
                     {
-                        skills.slice(0, skillsMid)
-                            .map(skill => (
-                                <ListItem key={skill}>
-                                    <ListItemIcon style={{color: '#53f6c7'}}>
-                                        <SendIcon />
-                                    </ListItemIcon>
-                                    <ListItemText styles={{'white-space': 'nowrap'}} primary={skill} />
-                                </ListItem>
-                            ))
-                    }
-                </List>
-                <List className={classes.skills}>
-                    {
-                        skills.slice(skillsMid)
-                            .map(skill => (
-                                <ListItem>
-                                    <ListItemIcon style={{color: '#53f6c7'}}>
-                                        <SendIcon />
-                                    </ListItemIcon>
-                                    <ListItemText styles={{'white-space': 'nowrap'}} primary={skill} />
-                                </ListItem>
+                        skills.map(skill => (
+                                <Chip label={skill} className={classes.chip} />
                             ))
                     }
                 </List>
@@ -151,8 +139,7 @@ const About = (props) => {
                                         </ListItemIcon>
                                         <ListItemText 
                                             variant="h4"
-                                            styles={{'white-space': 'nowrap'}} 
-                                            primary={language} 
+                                            primary={language}
                                         />
                                     </ListItem>
                                 ))

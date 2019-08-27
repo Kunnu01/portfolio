@@ -13,7 +13,7 @@ class Typing extends Component {
     const n = words.map((word) => {
       return ([
         <span key={uuid()}>{word}</span>,
-        <Typist.Backspace key={uuid()} count={word.length} delay={2000} />,
+        <Typist.Backspace key={uuid()} count={word.length} delay={3000} />,
       ]);
     });
 

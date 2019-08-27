@@ -35,7 +35,7 @@ const styles = theme => ({
     },
     button: {
         margin: '5%',
-        color: '#53f6c7',
+        color: theme.palette.text.secondary,
         [theme.breakpoints.down('sm')]: {
             // fontSize: '2em',
             marginTop: '10vh',
@@ -60,13 +60,13 @@ const ContactPage = (props) => {
             <Typography variant="h6" className={classes.findMe}>
                 You can find me at:
             </Typography>
-            <Typography variant="h6">
+            <Typography variant="h6" color="textPrimary">
                 kunalbhatia2409@gmail.com
             </Typography>
             <Button 
                 variant="outlined" 
                 size="large" 
-                color="inherit" 
+                color="inherit"
                 href="mailto:kunalbhatia2409@gmail.com"
                 className={classes.button}
             >

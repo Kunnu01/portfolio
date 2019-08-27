@@ -22,6 +22,7 @@ const styles = theme => ({
     desc: {
         margin: '0 3vw',
         display: 'flex',
+        color: theme.palette.text.primary,
     },
 });
 
@@ -30,26 +31,30 @@ const Experience = (props) => {
 
     const experiences = [
         {
-            company: 'Pesto Tech',
-            role: 'Student',
-            duration: 'Jun 2019 - Present',
+            company: 'React Admin - Open Source',
+            role: 'Full Stack Developer',
+            duration: 'August 2019',
             desc: [
                 'Desc 1',
                 'Desc 2',
+            ],
+        },
+        {
+            company: 'Pesto Tech',
+            role: 'Engineering Mate',
+            duration: 'Jun 2019 - Present',
+            desc: [
+                `Spent 8 weeks reviewing web development best practices and learning soft skills for remote work
+                and creating Slack Clone as team project utilizing the skills learned.`,
+                `Spent 4 weeks contributing to Open Source Project - React Admin. 
+                It is a frontend Framework for building admin applications running in the browser on top of REST/GraphQL APIs, 
+                using ES6, React and Material Design. 
+                Here are the details of all PR merged or simply view all PR here.`,
             ],
         },
         {
             company: 'Successive Technologies',
             role: 'Software Developer',
-            duration: 'Jan 2019 - Jun 2019',
-            desc: [
-                'Desc 1',
-                'Desc 2',
-            ],
-        },
-        {
-            company: 'NodeExperts',
-            role: 'Full Stack Developer',
             duration: 'Jan 2019 - Jun 2019',
             desc: [
                 'Desc 1',

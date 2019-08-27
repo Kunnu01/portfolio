@@ -47,7 +47,7 @@ const styles = theme => ({
 
 const MainPage = (props) => {
     const { classes } = props;
-    const intro = ['Full Stack Developer ', 'From India '];
+    const intro = [ 'Full Stack Developer ' ];
     return (
         <section className={classes.root}>
             <div className={classes.intro}>
@@ -57,10 +57,11 @@ const MainPage = (props) => {
                         <span>Hello</span>
                         <span>Hola</span>
                         <span>Hallo</span>
-                        <span>Namastey</span>
                     </TextLoop>
                     <span style={{color: '#53f6c7'}}>&lt;/b&gt;</span> <span style={{color: '#53f6c7'}}>I'm Kunal, </span>
-                    <Typing words={intro} />
+                    <Typography variant="h3">
+                        <Typing words={intro} />
+                    </Typography>
                 </Typography>
             </div>
             <div className={classes.imageSection}>

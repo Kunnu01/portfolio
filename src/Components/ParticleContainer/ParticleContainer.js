@@ -2,11 +2,11 @@ import React from 'react'
 import Particles from "react-particles-js";
 import { style } from './styles';
 
-export default function ParticleContainer() {
+export default function ParticleContainer(props) {
     const particlesOptions = {
         'particles': {
             'number': {
-                'value': 200,
+                'value': 20,
                 'density': {
                 'enable': true,
                 'value_area': 180
@@ -59,6 +59,7 @@ export default function ParticleContainer() {
     return (
         <div style={style}>
             <Particles params={particlesOptions} />
+            {props.children}
         </div>
     )
 }

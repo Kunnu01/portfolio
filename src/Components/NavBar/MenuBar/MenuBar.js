@@ -111,7 +111,7 @@ const MenuBar = (props) => {
                 </ListItem>
             ))}
             {getSecondarySideOptions().map(({ text, icon, switchMode }) => (
-                <ListItem key={text} className={classes.listItem} onClick={() => {}}>
+                <ListItem key={text} className={classes.listItem} alignItems="center" onClick={() => {}}>
                 <Tooltip className={classes.tooltip} title={text} placement="right">
                 <ListItemIcon
                     onClick={switchMode} 
