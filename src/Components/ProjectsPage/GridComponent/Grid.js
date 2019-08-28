@@ -26,8 +26,8 @@ const styles = theme => ({
     },
     titleBar: {
         background:
-        'linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, ' +
-        'rgba(0,0,0,0.3) 70%, rgba(0,0,0,0.3) 100%)',
+        'linear-gradient(to bottom, rgba(0,0,0,0.5) 70%, ' +
+        'rgba(0,0,0,0.3) 80%, rgba(0,0,0,0.3) 100%)',
         [theme.breakpoints.down('sm')]: {
           height: '40%',
         },
@@ -46,6 +46,14 @@ const styles = theme => ({
 });
 
 const tileData = [
+    {
+      img: './Images/Slack.png',
+      title: 'Slack Clone',
+      github: 'https://github.com/pesto-students/batch-8-CODERHOOD',
+      desc: `It is a clone of Slack. Built during the training at Pesto Tech. I worked on the architecture and code of the application.
+      Tech stack used is NodeJs, ReactJs, MongoDb, Express, Jest etc.`,
+      live: 'https://coderhood.netlify.com/',
+    },
     {
         img: './Images/Burger.png',
         title: 'Burger App',
