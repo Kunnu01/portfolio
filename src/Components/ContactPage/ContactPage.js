@@ -20,7 +20,8 @@ const styles = theme => ({
     },
     para: {
         fontSize: '1.2em',
-        color: '#8892B0',
+        // color: '#8892B0',
+        color: theme.palette.text.primary,
         [theme.breakpoints.down('sm')]: {
             fontSize: '1em',
         },
@@ -51,10 +52,10 @@ const ContactPage = (props) => {
             <Typography className={classes.para}>
                 I'm currently open for any employment opportunities based on my expertise & 
             </Typography>
-            <Typography variant="h6" className={classes.para}>
+            <Typography className={classes.para}>
                 my inbox is always open. Feel free to contact me whether it's for  
             </Typography>
-            <Typography variant="h6" className={classes.para}>
+            <Typography className={classes.para}>
                 opportunities in developer communities or just to say hello.
             </Typography>
             <Typography variant="h6" className={classes.findMe}>
