@@ -19,6 +19,7 @@ import {
     faCloudMoon,
     faCloudSun,
     faBriefcase,
+    faFilePdf,
 } from '@fortawesome/free-solid-svg-icons';
 import { faMedium } from '@fortawesome/free-brands-svg-icons';
 import { Typography } from '@material-ui/core';
@@ -131,8 +132,23 @@ class TemporaryDrawer extends React.Component {
                 </ListItemText>
                 </ListItem>
             ))}
+            <ListItem button className={classes.listItem} alignItems="center"
+                component="a"
+                href="https://drive.google.com/file/d/1tUeDuJdf7MMcu8OZVYpltTwnSVU_Lyai/view?usp=sharing"
+                rel="noopener noreferrer"
+                target="_blank"
+            >
+                <ListItemIcon>
+                    <FontAwesomeIcon icon={faFilePdf} size="2x" />
+                </ListItemIcon>
+                <ListItemText>
+                    <Typography className={classes.sideList} color="textSecondary" variant="button">
+                        Resume
+                    </Typography>
+                </ListItemText>
+            </ListItem> 
             {this.getSecondarySideOptions().map(({ text, icon, switchMode = null }) => (
-                <ListItem button key={text} onClick={() => {}}>
+                <ListItem button key={text} onClick={() => {}} alignItems="center">
                 <ListItemIcon className={classes.listItemIcon}>{icon}</ListItemIcon>
                 <ListItemText>
                     <Typography
