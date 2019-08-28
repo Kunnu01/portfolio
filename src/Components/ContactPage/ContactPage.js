@@ -29,8 +29,9 @@ const styles = theme => ({
     findMe: {
         color: '#8892B0',
         margin: '2% 0',
+        whiteSpace: 'nowrap',
         [theme.breakpoints.down('sm')]: {
-            fontSize: '2em',
+            fontSize: '1.5em',
             margin: '5%',
         },
     },
