@@ -83,6 +83,7 @@ const About = (props) => {
         'NodeJs',
         'Typescript',
         'MongoDB',
+        'SQL',
         'GraphQL',
         'Git & Github',
     ];
@@ -94,8 +95,6 @@ const About = (props) => {
         'German (Beginner)',
     ]
 
-    const skillsMid = Math.floor(skills.length / 2);
-    
     const { classes } = props;
     return (
         <div className={classes.root}>

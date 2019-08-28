@@ -20,7 +20,7 @@ const styles = theme => ({
         color: '#8892B0'
     },
     desc: {
-        margin: '-3vh 3vw',
+        margin: '-5vh 3vw',
         display: 'flex',
         color: theme.palette.text.primary,
     },
@@ -46,7 +46,7 @@ const Experience = (props) => {
             desc: [
                 <p>It is a frontend Framework for building admin applications running in the browser on top of 
                 REST/GraphQL APIs, using ES6, React, and Material Design.</p>,
-                <p>Worked on various issues. You can have a look at my PRs <a href="https://github.com/marmelab/react-admin/pulls/Kunnu01" target="_blank" className={classes.link}>here</a>.</p>,
+                <p>Worked on various issues. You can have a look at my PRs <a href="https://github.com/marmelab/react-admin/pulls/Kunnu01" rel="noopener noreferrer" target="_blank" className={classes.link}>here</a>.</p>,
             ],
         },
         {
@@ -62,7 +62,7 @@ const Experience = (props) => {
                 It is a frontend Framework for building admin applications running in the browser on top of REST/GraphQL APIs, 
                 using ES6, React and Material Design. <a className={classes.link} href="https://docs.google.com/document/d/1lH8tlUGaBR4tzEsdgAz4BvsvRjXIJtMgc4lA6KVnbnM/edit#heading=h.l5pg374f3boy" rel="noopener noreferrer" target="_blank">Here </a>
                 are the details of all 
-                PR merged or simply view all PR <a href="https://github.com/marmelab/react-admin/pulls/Kunnu01" target="_blank" className={classes.link}>here</a>.</p>,
+                PR merged or simply view all PR <a href="https://github.com/marmelab/react-admin/pulls/Kunnu01" rel="noopener noreferrer" target="_blank" className={classes.link}>here</a>.</p>,
             ],
         },
         {
@@ -71,7 +71,13 @@ const Experience = (props) => {
             duration: 'Jan 2019 - Jun 2019',
             link: 'https://successive.tech',
             desc: [
-                <p>Worked on various parts of the Enterprise Integration, a data transformation tool, and created micro-services 
+                <p>Worked on various parts of the 
+                    <a href="https://nodexperts.com/enterprise-integration/" rel="noopener noreferrer"
+                        target="_blank"
+                        className={classes.link}
+                    > Enterprise Integration
+                    </a>, 
+                    a data transformation tool, and created micro-services 
                 using technologies like MERN Stack, TypeScript, Apollo, SQL, Datahub, Salesforce, etc. </p>,
                 <p>Created backend part using NodeJs and GraphQL of FlagIt, an application for toggling features based on strategies.</p>,
                 <p>Worked on the schema and the backend of a Chat POC.</p>
@@ -83,7 +89,11 @@ const Experience = (props) => {
             duration: 'Jun 2018 - Sep 2018',
             link: 'https://beryl.agency',
             desc: [
-                <p>Worked on the frontend and core functionalities of Oran, an e-commerce site for batteries.</p>,
+                <p>Worked on the frontend and core functionalities of 
+                    <a href="https://www.oranonline.in/"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    className={classes.link}> Oran</a>, an e-commerce site for batteries.</p>,
                 <p>Continued working as a freelancer helping them solve various issues.</p>,
             ],
         },

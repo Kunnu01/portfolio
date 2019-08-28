@@ -47,7 +47,7 @@ const styles = theme => ({
     },
     introRole: {
         [theme.breakpoints.down('sm')]: {
-            fontSize: '2.5rem',
+            fontSize: '1.5rem',
         },
     },
 });
@@ -66,7 +66,7 @@ const MainPage = (props) => {
                         <span>Hallo</span>
                     </TextLoop>
                     <span className={classes.textSecondary}>&lt;/b&gt;</span> <span className={classes.textSecondary}>I'm Kunal, </span>
-                    <Typography variant="h3" className="introRole">
+                    <Typography variant="h4" className="introRole">
                         <Typing words={intro} />
                     </Typography>
                 </Typography>
