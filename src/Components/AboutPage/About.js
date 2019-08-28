@@ -111,7 +111,7 @@ const About = (props) => {
             </Typography>
             <Typography variant="h6" className={classes.para}>
             I always want to learn more, do more, and be more. 
-            I’m also a firm believer that we should never settle
+            I’m also a firm believer that we should never settle.
             </Typography>
 
             <Typography variant="h6" color="textSecondary" style={{margin: '2% 0', marginBottom: '1%'}}>
