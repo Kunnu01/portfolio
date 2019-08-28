@@ -18,7 +18,8 @@ import {
     faCodeBranch,
     faCloudMoon,
     faCloudSun,
-    faBriefcase
+    faBriefcase,
+    faFilePdf
 } from '@fortawesome/free-solid-svg-icons';
 import { faMedium } from '@fortawesome/free-brands-svg-icons';
 
@@ -116,6 +117,18 @@ const MenuBar = (props) => {
                     </Tooltip>
                 </ListItem>
             ))}
+            <ListItem className={classes.listItem} alignItems="center"
+                component="a"
+                href="https://drive.google.com/file/d/1tUeDuJdf7MMcu8OZVYpltTwnSVU_Lyai/view?usp=sharing"
+                rel="noopener noreferrer"
+                target="_blank"
+            >
+                <Tooltip className={classes.tooltip} title="Resume" placement="right">
+                    <ListItemIcon className={styleClasses.MenubarItems}>
+                        <FontAwesomeIcon icon={faFilePdf} size="2x" />
+                    </ListItemIcon>
+                </Tooltip>
+            </ListItem>
             {getSecondarySideOptions().map(({ text, icon, switchMode }) => (
                 <ListItem key={text} className={classes.listItem} alignItems="center" onClick={() => {}}>
                 <Tooltip className={classes.tooltip} title={text} placement="right">
