@@ -26,7 +26,7 @@ class App extends Component {
     const { isLightTheme } = this.state;
     this.setState({
       isLightTheme: !isLightTheme,
-    })
+    });
   }
   
   render() {
@@ -42,7 +42,7 @@ class App extends Component {
                 <main
                   style={isLightTheme ? lightTheme.palette.mainPage : darkTheme.palette.mainPage}
                 >
-                <ParticleContainer />
+                <ParticleContainer theme={portfolioTheme} />
                     <Route exact path="/" component={MainPage} />
                     <Route path="/projects" component={ProjectsPage} />
                     <Route path="/blogs" component={BlogPage} />

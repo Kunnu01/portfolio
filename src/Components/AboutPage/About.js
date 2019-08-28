@@ -68,8 +68,11 @@ const styles = theme => ({
             margin: '0',
             flexDirection: 'column',
         },
-    }
-})
+    },
+    listIcon: {
+        color: theme.palette.text.secondary,
+    },
+});
 
 const About = (props) => {
 
@@ -134,7 +137,7 @@ const About = (props) => {
                             languages
                                 .map(language => (
                                     <ListItem key={language}>
-                                        <ListItemIcon style={{color: '#53f6c7'}}>
+                                        <ListItemIcon className={classes.listIcon}>
                                             <SendIcon />
                                         </ListItemIcon>
                                         <ListItemText 

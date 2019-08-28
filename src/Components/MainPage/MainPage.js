@@ -26,6 +26,9 @@ const styles = theme => ({
             fontSize: '2.5rem',
         },
     },
+    textSecondary: {
+        color: theme.palette.text.secondary,
+    },
     imageSection: {
         flex: 0.8,
         paddingTop: '4%',
@@ -36,30 +39,34 @@ const styles = theme => ({
         maxHeight: '100%',
         maxWidth: '90%',
         marginBottom: '8%',
-        cursor: 'pointer',
         boxShadow: '25px 20px 15px #2a2931',
         [theme.breakpoints.down('sm')]: {
             width: '70%',
             borderRadius: '10px',
         },
     },
+    introRole: {
+        [theme.breakpoints.down('sm')]: {
+            fontSize: '2.5rem',
+        },
+    },
 });
 
 const MainPage = (props) => {
     const { classes } = props;
-    const intro = [ 'Full Stack Developer ' ];
+    const intro = [ 'Full Stack Developer ', 'From India' ];
     return (
         <section className={classes.root}>
             <div className={classes.intro}>
                 <Typography align="left" className={classes.intro} variant="h1" color="textPrimary">
-                    <span style={{color: '#53f6c7'}}>&lt;b&gt;</span>
+                    <span className={classes.textSecondary}>&lt;b&gt;</span>
                     <TextLoop>
                         <span>Hello</span>
                         <span>Hola</span>
                         <span>Hallo</span>
                     </TextLoop>
-                    <span style={{color: '#53f6c7'}}>&lt;/b&gt;</span> <span style={{color: '#53f6c7'}}>I'm Kunal, </span>
-                    <Typography variant="h3">
+                    <span className={classes.textSecondary}>&lt;/b&gt;</span> <span className={classes.textSecondary}>I'm Kunal, </span>
+                    <Typography variant="h3" className="introRole">
                         <Typing words={intro} />
                     </Typography>
                 </Typography>

@@ -30,6 +30,9 @@ const styles = theme => ({
         display: 'block',
         },
     },
+    appBar: {
+        background: 'transparent',
+    }
 });
 
 class NavBar extends React.Component {
@@ -54,7 +57,7 @@ class NavBar extends React.Component {
         return (
             <>
                 <div className={classes.root}>
-                    <AppBar style={{boxShadow: 'none'}} color="primary" position="fixed">
+                    <AppBar style={{boxShadow: 'none', background: 'transparent'}} position="fixed">
                     <Toolbar>
                         <IconButton onClick={this.toggleDrawer} className={classes.menuButton} color="inherit" aria-label="Open drawer">
                             <MenuIcon />

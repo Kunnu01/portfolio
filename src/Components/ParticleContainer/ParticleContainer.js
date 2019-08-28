@@ -1,6 +1,5 @@
 import React from 'react'
 import Particles from "react-particles-js";
-import { style } from './styles';
 
 export default function ParticleContainer(props) {
     const particlesOptions = {
@@ -9,14 +8,18 @@ export default function ParticleContainer(props) {
                 'value': 20,
                 'density': {
                 'enable': true,
-                'value_area': 180
+                'value_area': 200,
             }
             },
+            'color': {
+                "value": ["#BD10E0","#B8E986","#50E3C2","#FFD300","#E86363"]
+                // 'value': props.theme.palette.text.primary,
+            },
             'size': {
-                'value': 3,
+                'value': 4,
                 'random': true,
                 'anim': {
-                    'speed': 4,
+                    'speed': 10,
                     'size_min': 0.3
                 }
             },
@@ -57,7 +60,7 @@ export default function ParticleContainer(props) {
     }
 
     return (
-        <div style={style}>
+        <div style={props.theme.palette.particle}>
             <Particles params={particlesOptions} />
             {props.children}
         </div>

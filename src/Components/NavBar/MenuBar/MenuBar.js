@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom';
 import { withRouter } from "react-router";
 import { withStyles } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
@@ -26,7 +27,7 @@ const styles = theme => ({
         display: 'block',
         marginTop: '25vh',
         // maxHeight: '70vh',
-        width: '6%',
+        width: '3%',
         position: 'fixed',
         height: '100vh',
         zIndex: '100',
@@ -41,16 +42,19 @@ const styles = theme => ({
     tooltip: {
         position: 'relative',
         zIndex: 999,
+    },
+    active: {
+        color: theme.palette.text.secondary,
     }
 });
 
 const MenuBar = (props) => {
     const { classes } = props;
 
-    const linkTo = (link) => {
-        const { history } = props;
-        history.push(link);
-    }
+    // const linkTo = (link) => {
+    //     const { history } = props;
+    //     history.push(link);
+    // }
 
     const getSecondarySideOptions = () => {
         const { handleSwitch } = props;
@@ -100,9 +104,11 @@ const MenuBar = (props) => {
         <div className={classes.root} >
             <List>
             {list.map(({text, icon, link}) => (
-                <ListItem className={classes.listItem} key={text} alignItems="center"
-                        onClick={() => linkTo(link)}
-                    >
+                <ListItem 
+                    component={NavLink} to={link} 
+                    key={text}
+                    alignItems="center"
+                >
                     <Tooltip className={classes.tooltip} title={text} placement="right">
                         <ListItemIcon className={styleClasses.MenubarItems}>
                             {icon}

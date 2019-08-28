@@ -6,7 +6,7 @@ const styles = theme => ({
   progress: {
       margin: theme.spacing.unit*3,
       marginTop: theme.spacing.unit*12,
-    color: '#53f6c7'
+    color: theme.palette.text.secondary,
   },
 });
 
