@@ -109,10 +109,10 @@ const MenuBar = (props) => {
                     component={NavLink} to={link} 
                     key={text}
                     alignItems="center"
-                    className={styleClasses.MenubarItems}
+                    // className={styleClasses.MenubarItems}
                 >
                     <Tooltip className={classes.tooltip} title={text} placement="right">
-                        <ListItemIcon>
+                        <ListItemIcon className={styleClasses.MenubarItems}>
                             {icon}
                         </ListItemIcon>
                     </Tooltip>

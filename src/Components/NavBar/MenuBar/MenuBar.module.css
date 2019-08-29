@@ -1,6 +1,6 @@
 .MenubarItems:hover {
     position: relative;
-    padding-left: 3vw;
+    padding-left: 1.5vw;
     height: auto;
     /* color: #6af2c7; */
     transition: 0.5s;
