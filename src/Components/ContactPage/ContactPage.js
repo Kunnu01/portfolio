@@ -63,13 +63,13 @@ const ContactPage = (props) => {
                 You can find me at:
             </Typography>
             <Typography variant="h6" color="textPrimary">
-                kunalbhatia2409@gmail.com
+                kunalbhatia004@gmail.com
             </Typography>
             <Button 
                 variant="outlined" 
                 size="large" 
                 color="inherit"
-                href="mailto:kunalbhatia2409@gmail.com"
+                href="mailto:kunalbhatia004@gmail.com"
                 className={classes.button}
             >
                 Say Hello
