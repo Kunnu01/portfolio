@@ -12,6 +12,7 @@ const styles = theme => ({
     padding: theme.spacing.unit * 2,
     background: '#0a192f',
     backgroundColor: 'rgba(255, 255, 255, 0.1)',
+    margin: '2%',
     marginLeft: '5vw',
     marginRight: '2vw',
     [theme.breakpoints.down('sm')]: {
@@ -20,7 +21,8 @@ const styles = theme => ({
     },
   },
   media: {
-    height: 200,
+    height: 170,
+    objectFit: 'cover',
   },
 });
 class BlogPage extends Component {
@@ -40,6 +42,20 @@ class BlogPage extends Component {
       this.setState({ blogPosts, isLoading: false });
     });
   }
+
+  toText = (node) => {
+    let tag = document.createElement('div')
+    tag.innerHTML = node
+    node = tag.innerText
+    return node
+  }
+
+  shortenText = (text,startingPoint ,maxLength) => {
+      return text.length > maxLength?
+      text.slice(startingPoint, maxLength):
+      text
+  }
+  
   getBlogPosts = () => {
     const { classes } = this.props;
     const { blogPosts = [] } = this.state;
@@ -57,6 +73,9 @@ class BlogPage extends Component {
               <Typography variant="h5" component="h3">
                 {blog.title}
               </Typography>
+              <div class="blog_preview">
+                  <p class="blog__intro">{this.shortenText(this.toText(blog.content), 0, 300)+ '...'}</p>
+              </div>
               <Typography component="p">
               </Typography>
             </CardContent>
