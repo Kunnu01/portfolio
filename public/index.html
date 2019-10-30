@@ -150,20 +150,13 @@ function checkSupport(browser) {
 }
 
 var browser = get_browser()
+if (browser.name !== 'IE' || browser.name !== 'MSIE') {
+  document.getElementById('support_error').style.display = 'none'
+}
 var isSupported = checkSupport(browser)
-alert(browser.version)
-alert(browser.name)
 
 if (!isSupported) {
-  if (browser.name === 'IE') {
-    alert('Error')
-    document.write('Error')
-  }
-  var errorBlock = document.getElementById('support_error')
-  if (errorBlock) {
-    alert('Gotcha')
-  }
-  // document.getElementById('root').style.display = 'none'
+  document.getElementById('root').style.display = 'none'
   document.getElementById('support_error').style.display = 'grid'
 }
     </script>
