@@ -154,11 +154,13 @@ var isSupported = checkSupport(browser)
 alert(browser.name)
 if (browser.name !== "IE" || browser.name !== "MSIE") {
   alert('OHOO')
+  alert(browser.name !== "IE")
   alert(isSupported)
-  document.getElementById('support_error').style.display = 'none'
+  document.getElementById('support_error').style.display = 'grid'
 }
 
 if (!isSupported) {
+  alert('check support')
   document.getElementById('root').style.display = 'none'
   document.getElementById('support_error').style.display = 'grid'
 }
