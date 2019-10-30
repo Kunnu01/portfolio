@@ -155,13 +155,15 @@ alert(browser.version)
 alert(browser.name)
 
 if (!isSupported) {
+  if (browser.name === 'IE') {
+    document.write('Error')
+  }
   var errorBlock = document.getElementById('support_error')
   if (errorBlock) {
     alert('Gotcha')
   }
   // document.getElementById('root').style.display = 'none'
   document.getElementById('support_error').style.display = 'grid'
-  alert(errorBlock.style.display)
 }
     </script>
   </body>
