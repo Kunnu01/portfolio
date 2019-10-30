@@ -68,7 +68,7 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <!--[if IE]>Your old version of Internet Explorer is not supported on this site.<![endif]-->
-    <div>
+    <div id="support_error">
         <img id="bns_img" src="/browserSupportImages/BrowserNotSupported.png" alt="Browser not supported" />
         <div id="bns_error">
           <h2>Hey, your browser version isn't supported. For best experience, we recommended using the latest version of Chrome.</h2>
@@ -150,7 +150,9 @@ function checkSupport(browser) {
 }
 
 var browser = get_browser()
+alert(browser.name)
 if (browser.name !== 'IE' || browser.name !== 'MSIE') {
+  alert('OHOO')
   document.getElementById('support_error').style.display = 'none'
 }
 var isSupported = checkSupport(browser)
