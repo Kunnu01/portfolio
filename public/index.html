@@ -39,6 +39,7 @@
     /> -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
     <title>Kunal Bhatia</title>
+    <link rel="stylesheet" href="/index.css">
     <style>
       html, body {
         height: 100%;
@@ -49,9 +50,35 @@
     </style>
   </head>
   <body>
-    <!--[if IE]>Your old version of Internet Explorer is not supported on this site.<![endif]-->
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div> IE </div>
+    <!--[if IE]>Your old version of Internet Explorer is not supported on this site.<![endif]-->
+    <div id="support_error">
+        <img id="bns_img" src="/browserSupportImages/BrowserNotSupported.png" alt="Browser not supported" />
+        <div id="bns_error">
+          <h2>Hey, your browser version isn't supported. For best experience, we recommended using the latest version of Chrome.</h2>
+          <h2>Here is what works:</h2>
+        </div>
+        <ul id="bns_ul">
+          <li>
+            <a href="https://www.google.com/chrome/" class="bns_a" target="_blank">
+              <img class="bns_img" src="/browserSupportImages/Chrome.webp" alt="Chrome">
+              <h5>Chrome <span id="recommended">(recommended)</span></h5>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.mozilla.org/firefox/new/" class="bns_a" target="_blank">
+              <img class="bns_img" id="bns_firefox" src="/browserSupportImages/Firefox.png" alt="Firefox">
+              <h5>Firefox</h5>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.microsoft.com/windows/microsoft-edge" class="bns_a" target="_blank">
+              <img class="bns_img" id="bns_edge" src="/browserSupportImages/Edge.png" alt="Microsoft Edge">
+              <h5>Edge</h5>
+            </a>
+          </li>
+        </ul>
+      </div>
     <div id="root"></div>
     <!--
       This HTML file is a template.
