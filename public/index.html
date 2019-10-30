@@ -151,6 +151,11 @@ function checkSupport(browser) {
 
 var browser = get_browser()
 var isSupported = checkSupport(browser)
+
+if (browser.name === 'IE' || browser.name === 'MSIE') {
+  document.getElementById('support_error').style.visibility = 'visible'
+}
+
 if (browser.name !== "IE" && browser.name !== "MSIE") {
   document.getElementById('root').style.display = 'block'
   document.getElementById('support_error').style.display = 'none'
@@ -159,6 +164,8 @@ if (browser.name !== "IE" && browser.name !== "MSIE") {
 if (!isSupported) {
   document.getElementById('root').style.display = 'none'
   document.getElementById('support_error').style.display = 'grid'
+  document.getElementById('support_error').style.visibility = 'visible'
+
 }
     </script>
   </body>
