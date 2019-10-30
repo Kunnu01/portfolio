@@ -151,13 +151,13 @@ function checkSupport(browser) {
 
 var browser = get_browser()
 var isSupported = checkSupport(browser)
-// alert(browser.name)
-// if (browser.name !== "IE" && browser.name !== "MSIE") {
-//   document.getElementById('support_error').style.display = 'none'
-// }
+alert(browser.name)
+if (browser.name !== "IE" && browser.name !== "MSIE") {
+  document.getElementById('support_error').style.display = 'none'
+}
 
 if (!isSupported) {
-  alert('check support')
+  document.getElementById('root').style.display = 'none'
   document.getElementById('support_error').style.display = 'grid'
 }
     </script>

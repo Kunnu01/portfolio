@@ -3,7 +3,7 @@
 */
 
 #support_error {
-    display: none;
+    display: grid;
     margin: 0%;
     min-height: 100vh;
     padding: 2em;
