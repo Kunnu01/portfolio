@@ -141,7 +141,7 @@ function checkSupport(browser) {
     supported = false
   } else if (browser.name === "Firefox" && browser.version < latestVersions[browser.name] - 2) {
     supported = false
-  } else if ((browser.name === "MSIE" || browser.name === "IE") && browser.version < 11) {
+  } else if ((browser.name === "MSIE" || browser.name === "IE")) {
     supported = false
   } else if (browser.name === "Opera") {
     supported = false
@@ -151,7 +151,7 @@ function checkSupport(browser) {
 
 var browser = get_browser()
 var isSupported = checkSupport(browser)
-alert(browser.name, browser.version)
+alert(isSupported)
 
 if (!isSupported) {
   document.getElementById('root').style.display = 'none'
