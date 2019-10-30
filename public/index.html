@@ -152,8 +152,8 @@ function checkSupport(browser) {
 var browser = get_browser()
 var isSupported = checkSupport(browser)
 alert(browser.name)
-if (browser.name !== "IE" && browser.name !== "MSIE") {
-  document.getElementById('support_error').style.display = 'none'
+if (browser.name === "IE" && browser.name === "MSIE") {
+  document.getElementById('support_error').style.display = 'flex'
 }
 
 if (!isSupported) {
