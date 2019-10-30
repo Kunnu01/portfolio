@@ -151,9 +151,14 @@ function checkSupport(browser) {
 
 var browser = get_browser()
 var isSupported = checkSupport(browser)
-alert(isSupported)
+alert(browser.version)
+alert(browser.name)
 
 if (!isSupported) {
+  var errorBlock = document.getElementById('support_error')
+  if (errorBlock) {
+    alert('Gotcha')
+  }
   document.getElementById('root').style.display = 'none'
   document.getElementById('support_error').style.display = 'grid'
 }
