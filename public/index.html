@@ -17,7 +17,7 @@
 
       gtag('config', 'UA-146816465-1');
     </script>
-    <script>
+    <!-- <script>
       window.onload = function() {
         checkBrowser();
       }
@@ -32,7 +32,7 @@
         //Display WhiteScreen and Message
         }
     }
-    </script>
+    </script> -->
     <!--
       manifest.json provides metadata used when your web app is added to the
       homescreen on Android. See https://developers.google.com/web/fundamentals/web-app-manifest/
@@ -151,7 +151,7 @@ function checkSupport(browser) {
 
 var browser = get_browser()
 var isSupported = checkSupport(browser)
-console.log(browser)
+alert(browser.name, browser.version)
 
 if (!isSupported) {
   document.getElementById('root').style.display = 'none'
