@@ -120,7 +120,7 @@ const MenuBar = (props) => {
             ))}
             <ListItem className={classes.listItem} alignItems="center"
                 component="a"
-                href="https://drive.google.com/file/d/1BHQuY5FeCC5dxeJip28df6Ypv67PErTw/view?usp=sharing"
+                href="https://docs.google.com/document/d/1DXLpQhvgOIpfVw9JXhLnvSwJzJYcXz0udJM2ZGtkqNc/edit?usp=sharing"
                 rel="noopener noreferrer"
                 target="_blank"
             >
